@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partial/head.ejs')%>
+
+	<body>
+		<%- include('./partial/header.ejs')%>
+
+			<main>
+				<div class="container">
+					<div class="row mt-5">
+						<div class="col-1"></div>
+						<div class="col-10 mainHeader ">
+							<%- include('./partial/registrationHeader.ejs') %>
+						</div>
+					</div>
+					<div class="row mt-5">
+						<div class="col-1"></div>
+						<div class="col-10">
+							<div class="mainPost">
+								<div class="container-fluid">
+									<div class="row postMainRow  border border-success">
+										<div class="col-7 p-4 pe-5">
+											<h4><strong>
+													<%= post.author %>
+												</strong></h4>
+											<div class="d-block flex-column">
+												<h3><strong>
+														<%= post.postTitle %>
+													</strong></h3>
+												<hr class="border border-success border-1 opacity-50">
+											</div>
+											<p class="mt-5">
+												<%= post.text %>
+											</p>
+										</div>
+										<div class="col-5 p-4 pe-5">
+											<div class="row d-flex justify-content-between">
+												<div class="col-8"></div>
+												<div class="col-3 fs-4 me-1 p-0">
+													<%= post.createdAt.toLocaleDateString() %>
+												</div>
+											</div>
+											<div class="row mt-5">
+												<div class="col-1"></div>
+												<div class="col-11 mt-5">
+													<img src="<%= post.image %>" class="img-fluid" alt="post image" width="350" height="350">
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="row d-grid postSecRow mt-4">
+										<% if (miniPosts.length) { %>
+											<% miniPosts.forEach(({ title, author, image, id, createdAt })=> { %>
+												<a href="/blog/<%=id%>" class="text-decoration-none postMini">
+													<div href="/blog/<%=id%>" class="border border-success">
+														<div class="row">
+															<div class="col-12">
+																<div class="miniImage" style="background-image: url(<%=image%>)"></div>
+															</div>
+														</div>
+														<div class="row ps-3 pe-3 mt-4">
+															<div class="col-12">
+																<div class="d-block flex-column text-center">
+																	<h5><strong>
+																			<%=title%>
+																		</strong></h5>
+																	<hr class="border border-success border-1 opacity-50">
+																	<div class="miniPost-info-row d-flex align-items-center justify-content-between mb-2">
+																		<h5><strong>
+																				<%=author%>
+																			</strong></h5>
+																		<h5><strong>
+																				<% const createdAtDate=new Date(createdAt); %>
+																					<%= createdAtDate.toLocaleDateString() %>
+																			</strong></h5>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</a>
+												<% }) %>
+													<% } %>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-1"></div>
+				</div>
+				</div>
+				<div class="col-1"></div>
+			</main>
+			<%- include('./partial/footer.ejs')%>
+	</body>
+
+</html>

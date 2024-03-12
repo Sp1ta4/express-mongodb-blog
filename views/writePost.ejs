@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partial/head.ejs')%>
+
+  <body>
+    <%- include('./partial/header.ejs')%>
+      <main>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8 border p-3">
+              <div class="row ">
+                <div class="col-6 addPostText d-flex flex-column justify-content-center ">
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control writeInputs" name="title" id="floatingInput"
+                      placeholder="Заголовок поста">
+                    <label for="floatingInput">Заголовок поста</label>
+                  </div>
+                  <div class="mb-3">
+                    <textarea class="form-control writeInputs" rows="8" placeholder="Начните писать свой пост..."
+                      name="text"></textarea>
+                  </div>
+                  <div class="row">
+                    <div class="col-7">
+                      <button class="btn btn-success w-100" type="button" onclick="publishPost()">Опубликовать</button>
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="col-4">
+                      <select class="form-select writeInputs" name="accessModifier"
+                        aria-label="Выбор модификатора доступа">
+                        <option value="open" selected>Доступно всем</option>
+                        <option value="close">Закрытый доступ</option>
+                        <option value="link">Доступ по ссылке</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-5 addPostText importImage">
+                  <div class="row">
+                    <div class="col-12 d-flex flex-column justify-content-center align-items-center">
+                      <div class="mb-3 p-3">
+                        <label for="formFile"
+                          class="importImageLabel form-label d-flex flex-column justify-content-center align-items-center">
+                          Выберите изображение
+                          <div class="emptyImage d-flex justify-content-center align-items-center mt-3">
+                            <img src="/images/icons/emptyImage.png" alt="Import image" width="140" height="140">
+                          </div>
+                        </label>
+                        <input class="form-control uploadImage mt-3" name="image" type="file" id="formFile">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-2"></div>
+          </div>
+        </div>
+      </main>
+      <%- include('./partial/footer.ejs')%>
+
+        <%- include('./partial/scripts.ejs')%>
+  </body>
+
+</html>

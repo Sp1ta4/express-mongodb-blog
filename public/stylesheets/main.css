@@ -1,0 +1,472 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+.container-fluid,
+.row,
+.col-4,
+.col-6,
+.col-12 {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+textarea {
+  resize: none !important;
+}
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+I h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+ul,
+li {
+  display: block;
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container {
+  margin: 0 auto;
+}
+.logoHeader {
+  width: 130px;
+}
+.header {
+  background-color: #fffefc;
+  font-family: 'Oswald', sans-serif;
+  padding-top: 57px;
+}
+.menu li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  color: #2a7c6f;
+}
+.menu li:not(:hover) {
+  transition: all 0.4s ease;
+}
+.menu li:hover {
+  transform: translateY(-5%);
+  transition: all 0.4s ease;
+}
+.headerLine {
+  position: absolute;
+  top: 4%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  color: #a0138e;
+}
+.searchBlock {
+  height: 32px !important;
+  width: 240px;
+  left: 85%;
+  top: 50%;
+}
+.searchBtn {
+  width: 48px;
+  background: #2c8d7e !important;
+}
+
+.homeText {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: #2a7c6f;
+  background-color: #fffefc;
+  font-family: 'Oswald', sans-serif;
+  margin-top: 5%;
+}
+.homeText h1 {
+  text-align: center;
+  font-size: 3.8rem;
+  font-weight: 100;
+}
+.homeText h2 {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: lighter;
+  margin-top: -1%;
+}
+.homeImage {
+  position: relative; /* Абсолютное позиционирование */
+  width: 1704px; /* Ширина слоя в пикселах */
+  height: 450px; /* Высота слоя в пикселах */
+  margin-right: auto;
+  margin-left: auto;
+}
+.homeImage img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+}
+.footerText {
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+}
+.footer .row {
+  background-color: #2a7c6f;
+  height: 150px;
+}
+main {
+  min-height: 100vh;
+  margin-top: 7rem;
+}
+.mainColImage {
+  background-image: url('../images/book.jpg');
+  width: 100%;
+  height: 300px;
+}
+.contactImage {
+  background-image: url('../images/BackGround.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.myContact {
+  font-size: 1.4rem;
+  background-color: #2a7c6f;
+  color: #fff;
+  font-family: 'Fira Sans Condensed', sans-serif;
+}
+.contactMainRow {
+  height: 320px;
+}
+.aboutText {
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  color: #2a7c6f;
+  font-size: 20px;
+}
+.aboutText h2 {
+  font-size: 2rem;
+  letter-spacing: 0.2em;
+}
+.aboutText h3 {
+  font-size: 1.6rem;
+}
+.regHeader {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  color: #2a7c6f !important;
+}
+.regHeader a {
+  color: #2a7c6f !important;
+}
+.regBtn {
+  border: 1.5px solid #2a7c6f;
+  width: 200px;
+  height: 34px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.45s ease-in-out;
+}
+
+.regBtn:hover {
+  background-color: #2a7c6f;
+  border: 0;
+}
+.regBtn:active {
+  background-color: #46aa9b;
+  transition: 0.2s;
+}
+.regBtn:hover > h3 {
+  color: #fff;
+}
+.regBtn > h3 {
+  font-size: 1.2rem;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  color: #2a7c6f;
+  text-align: center;
+}
+.regHeaderLink:not(:hover) {
+  transition: all 0.4s ease;
+}
+.regHeaderLink:hover {
+  text-shadow: 0 8px 16px rgba(34, 60, 80, 0.62);
+  transform: translateY(-3%);
+  transition: all 0.4s ease;
+}
+.addPostBtn {
+  width: 200px;
+  height: 34px;
+  border: 1.5px solid #2a7c6f;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  z-index: 0;
+  transition: 0.6s ease-in-out;
+  font-size: 1.2rem;
+  font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.addPostBtn::before,
+.addPostBtn::after {
+  position: absolute;
+  background: #fff;
+  z-index: -1;
+  transition: 1s;
+  content: '';
+}
+
+.addPostBtn::before {
+  width: 200px;
+  height: 34px;
+}
+
+.addPostBtn::after {
+  width: 200px;
+  height: 34px;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.addPostBtn:hover::before {
+  width: 0px;
+  background: #fcfcfc;
+}
+
+.addPostBtn:hover::after {
+  height: 0px;
+  background: #fcfcfc;
+}
+
+.addPostBtn:hover {
+  background: #fcfcfc;
+}
+
+.emptyImage {
+  width: 200px;
+  height: 240px;
+}
+.importImageLabel {
+  cursor: pointer;
+}
+.addPostText {
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #252525;
+}
+.importImage:not(:hover) {
+  background-color: #fff;
+  transition: 0.6s ease;
+}
+.importImage:hover {
+  background-color: #f8f9fa;
+  transition: 0.6s ease;
+}
+.postImage {
+  min-height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.postText {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.postInfo {
+  color: #2a7c6f;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  letter-spacing: 0.1em;
+}
+.post {
+  cursor: pointer;
+}
+.post:not(:hover) {
+  transition: all 0.45s ease-out;
+}
+.post:hover {
+  transform: translateY(-1%);
+  -webkit-box-shadow: 0px 13px 36px -11px rgba(34, 60, 80, 0.42);
+  -moz-box-shadow: 0px 13px 36px -11px rgba(34, 60, 80, 0.42);
+  box-shadow: 0px 13px 36px -11px rgba(34, 60, 80, 0.42);
+  transition: all 0.45s ease-out;
+}
+.postMainRow {
+  color: #2a7c6f;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 700;
+}
+.postSecRow {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.postMini {
+  min-height: 280px;
+  padding: 0 !important;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  color: #2a7c6f;
+  cursor: pointer;
+}
+.postMini:not(:hover) {
+  transition: all 0.45s ease-out;
+}
+.postMini:hover {
+  transform: translateY(-2.5%);
+  box-shadow: -1px 12px 37px -6px rgba(0, 0, 0, 0.36);
+  -webkit-box-shadow: -1px 12px 37px -6px rgba(0, 0, 0, 0.36);
+  -moz-box-shadow: -1px 12px 37px -6px rgba(0, 0, 0, 0.36);
+  transition: all 0.45s ease-out;
+}
+.miniImage {
+  height: 200px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.login-box {
+  width: 290px;
+  background: #5372f0;
+  color: black;
+  margin: 110px auto;
+  border-radius: 6px;
+  padding: 10px 3px;
+  font-family: 'Oswald', sans-serif;
+}
+#LoginReg {
+  text-align: center;
+  color: #ff74ae;
+  letter-spacing: 0.1em;
+}
+.RegInput {
+  display: block;
+  width: 90%;
+  border: 1px solid #ff74ae;
+  padding: 10px;
+  font-size: 14px;
+  outline: none;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#RegButton {
+  width: 98%;
+  border: none;
+  outline: none;
+  height: 40px;
+  border-radius: 5px;
+  background: #4797ff;
+  cursor: pointer;
+  color: #fff;
+  font-size: 17px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+#RegP {
+  text-align: center;
+}
+#RegP a {
+  text-decoration: none;
+  color: #fff;
+}
+.divoid {
+  border: 1px solid #ceefe8;
+  width: 300px;
+  height: 310px;
+  margin-right: 53px;
+  margin-top: 5%;
+  overflow: hidden;
+  display: inline-block;
+  margin-left: -5px;
+}
+.textDivoid {
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  margin-top: 15%;
+  color: #2a7c6f;
+  font-size: 1.2rem;
+}
+.divoidHr {
+  width: 260px;
+  border-color: #2a7c6f;
+}
+.NextButton {
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+}
