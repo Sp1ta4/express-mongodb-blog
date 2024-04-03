@@ -12,7 +12,8 @@ module.exports = class writePostController {
   }
 
   static writePost = (req, res, next) => {
-    const post = new Post({ ...req.body, image: path.resolve(__dirname, '..', 'uploads', req.file.path) });
+    console.log(req.file);
+    const post = new Post({ ...req.body, image: path.join(req.file.filename) });
     post
       .save()
       .then((result) => res.redirect('/blog'))
